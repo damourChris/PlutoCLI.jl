@@ -4,6 +4,10 @@ using Comonicon
 using Pluto
 using LibGit2
 using Pkg
+using Scratch
+
+download_cache = ""
+
 
 """
     run_featured_notebook(port::Int)
@@ -13,13 +17,13 @@ Start a new Pluto Notebook in the featured notebook environment.
 function run_featured_notebook(port::Int)
     @assert VERSION >= v"1.6" && VERSION < v"1.7" "Featured notebook should be run in Julia 1.6s. Got $VERSION."
     
+    
     # Clone the repository into the directory
     pluto_featured_repo_url = "https://github.com/JuliaPluto/featured"
-    directory_path = joinpath(expanduser("~"), ".julia", "plutocli","envs","featured")
+    directory_path = download_cache
 
-    if !isdir(directory_path)
+    if isempty(readdir(directory_path))
         # Clone the repository
-        mkpath(directory_path)
         LibGit2.clone(pluto_featured_repo_url, directory_path)
     else
         repo = LibGit2.GitRepo(directory_path)
@@ -64,5 +68,10 @@ Start a new Pluto Notebook.
 end
  
 @main
+
+
+function __init__()
+    global download_cache = get_scratch!(@__MODULE__,joinpath("featured"))
+end
 
 end # PlutoCLI
