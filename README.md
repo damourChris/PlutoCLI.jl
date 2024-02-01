@@ -1,9 +1,9 @@
-# PlutoCLI
+# PlutoCLI.jl
 
-PlutoCLI is a simple command-line interface for starting Pluto.jl notebooks. It provides an easy way to manage and run your Pluto.jl notebooks from the command line. It is written in Julia using Comonicon.jl
+PlutoCLI.jl is a simple command-line interface for starting Pluto.jl notebooks. It provides an easy way to manage and run your Pluto.jl notebooks from the command line. It is written in Julia using Comonicon.jl
 
 ## Table of Contents
-- [PlutoCLI](#plutocli)
+- [PlutoCLI.jl](#plutoclijl)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -12,32 +12,12 @@ PlutoCLI is a simple command-line interface for starting Pluto.jl notebooks. It 
 
 ## Installation
 
-There are two options for installing PlutoCLI:
-
-**Option 1: Run the script directly**
-
-You can simply run the following command to start a notebook:
-
-```bash
-julia PlutoCLI.jl run <option>
-```
-
-**Option 2: Make the script an executable**
-
-Clone this repository to download the PlutoCLI.jl file.
-Rename the PlutoCLI.jl file to pluto (or any other name you prefer).
-Replace the shebang in the script with the path to your Julia executable.
-
-**On Linux/WSL:**
-
-```bash
-chmod +x pluto
-```
-
-Make the file an executable using the following command:
-
-(Optional) Export the binary location to PATH to allow execution from anywhere. For example:
+- Clone this repo
+- Activate the environment
+- Run `]build` to build the binary to `~/.julia/bin`
+- (Optional) Export the binary location to PATH to allow execution from anywhere. For example:
 ```export PATH="$HOME/.julia/bin:$PATH"```
+- Enjoy!
 
 ## Usage
 To start a Pluto.jl notebook, run the following command:
