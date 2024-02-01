@@ -1,6 +1,6 @@
 # PlutoCLI
 
-PlutoCLI is a simple command-line interface for starting Pluto.jl notebooks. It provides an easy way to manage and run your Pluto.jl notebooks from the command line, enhancing your productivity and workflow.
+PlutoCLI is a simple command-line interface for starting Pluto.jl notebooks. It provides an easy way to manage and run your Pluto.jl notebooks from the command line. It is written in Julia using Comonicon.jl
 
 ## Table of Contents
 - [PlutoCLI](#plutocli)
