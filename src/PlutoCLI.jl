@@ -7,9 +7,9 @@ using Comonicon
 
 
 """
-    start
+    run(; [port::Int=1729], [featured::Bool=false], [featured_port::Int=3458])
 
-Start a new Pluto Notebook
+Start a new Pluto Notebook.
 """
 @cast function run(; port::Int=1729, featured_port::Int=3458, featured::Bool=false)
 
