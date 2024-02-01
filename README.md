@@ -35,8 +35,10 @@ chmod +x pluto
 ```
 
 Make the file an executable using the following command:
+
 (Optional) Export the binary location to PATH to allow execution from anywhere. For example:
-export PATH="$HOME/.julia/bin:$PATH"
+```export PATH="$HOME/.julia/bin:$PATH"```
+
 ## Usage
 To start a Pluto.jl notebook, run the following command:
 
